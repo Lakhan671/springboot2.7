@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController("/")
 public class HomeController {
-    @GetMapping("/get")
+    @GetMapping("/errortest")
     public String get(){
-        return "get mapping call.";
-
+        throw new NullPointerException();
+       // return "get mapping call.";
     }
 }
